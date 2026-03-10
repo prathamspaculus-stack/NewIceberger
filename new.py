@@ -4,7 +4,6 @@ import joblib
 from datetime import date as DateType
 from pydantic import BaseModel, Field
 
-# load trained model
 model = joblib.load("call_volume_model.pkl")
 
 app = FastAPI(title="Call Volume Forecast API")
@@ -60,7 +59,6 @@ def build_features(input_date: DateType, history_df: pd.DataFrame):
 
         return pd.DataFrame([features])
 
-    # CASE 2: FUTURE FORECAST
     temp_df = df.copy()
     current_date = last_date
 
@@ -96,7 +94,6 @@ def build_features(input_date: DateType, history_df: pd.DataFrame):
     return X_step
 
 
-# load historical dataset
 history_df = pd.read_csv("2023 to 2026(all).csv")
 
 
