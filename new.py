@@ -53,7 +53,7 @@ def build_features(input_date: DateType, history_df: pd.DataFrame):
             "roll_mean_7": df["call_count"].iloc[idx-7:idx].mean(),
             "roll_mean_14": df["call_count"].iloc[idx-14:idx].mean(),
             "dayofweek": input_date.dayofweek,
-            "roll_std_7": df["call_count"].iloc[idx-7:idx].std(),
+            "roll_std_7": df["call_count"].iloc[idx-7:idx].std()
             
         }
 
