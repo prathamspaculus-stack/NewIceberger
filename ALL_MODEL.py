@@ -8,8 +8,11 @@ from sklearn.model_selection import RandomizedSearchCV, GridSearchCV, TimeSeries
 
 df = pd.read_csv("ALL_model.csv")
 
+
 train = df[df["date"] < "2025-07-01"]
 test = df[df["date"] >= '2025-07-01']
+
+
 
 features = [
     "lag_1","lag_7","lag_14","lag_21","lag_28","roll_mean_7","roll_mean_14","dayofweek","is_us_holiday","roll_std_7"
@@ -43,6 +46,6 @@ print("error: ",error_percent)
 
 
 
-with open("call_volume_ALL_model.pkl", "wb") as file:
-    pickle.dump(model, file)
+# with open("call_volume_ALL_model.pkl", "wb") as file:
+#     pickle.dump(model, file)
 
