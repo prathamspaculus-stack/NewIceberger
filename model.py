@@ -31,6 +31,9 @@ preds = model.predict(test[features])
 mae = mean_absolute_error(test[target], preds)
 print("MAE:", mae)
 
+avg_calls = test[target].mean()
+print(avg_calls)
+
 
 # with open("call_volume_model.pkl", "wb") as file:
 #     pickle.dump(model, file)
