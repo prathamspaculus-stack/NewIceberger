@@ -50,7 +50,7 @@ def build_features(input_date: DateType, history_df: pd.DataFrame):
         features = {
             "lag_1": df["call_count"].iloc[idx - 1],
             "lag_7": df["call_count"].iloc[idx - 7],
-            "lag_14":df["call_count"].iloc[idx - 14],
+             "lag_14":df["call_count"].iloc[idx - 14],
             "lag_21": df["call_count"].iloc[idx - 21],
             "lag_28" : df["call_count"].iloc[idx - 28],
             "roll_mean_7": df["call_count"].iloc[idx-7:idx].mean(),
