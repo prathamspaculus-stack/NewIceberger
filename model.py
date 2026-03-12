@@ -7,7 +7,7 @@ from lightgbm import LGBMRegressor
 df = pd.read_csv("main.csv")
 
 features = [
-    "lag_1","lag_7","lag_21","lag_28","roll_mean_7","roll_mean_14","dayofweek","roll_std_7"
+    "lag_1","lag_7","lag_14","lag_21","lag_28","roll_mean_7","roll_mean_14","dayofweek","roll_std_7"
 ]
 
 target = "call_count"
